@@ -86,13 +86,23 @@ function setColor(element) {
   element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
 }
 
-
-
-
 function getRandomColor() {
   const index = Math.floor(Math.random() * colors.length)
   return colors[index]
 }
+
+
+function winGame() {
+  function kill() {
+    const circle = document.querySelector('.circle')
+
+    if (circle) {
+      circle.click()
+    }
+  }
+  setInterval(kill, 42)
+}
+
 
 
 
